@@ -27,9 +27,9 @@
     <![endif]-->
   </head>
 
-  <body>
+  <body ng-app="app">
 
-    <div class="site-wrapper">
+    <div class="site-wrapper" ng-controller="FrontController">
 
       <div class="site-wrapper-inner">
 
@@ -48,11 +48,25 @@
           <div class="inner cover">
             <h1 class="cover-heading">Nick Makarov</h1>
             <p class="lead">Web developer</p>
+
+            <p>
+              <span ng-repeat="record in skills">
+                {{record.skill}}&nbsp;<span class="secondary">{{record.details.join(', ')}}</span>
+              </span>              
+            </p>
+
             <p class="lead">&nbsp;</p>
+
+            <p>
+              {{projects.join(', &nbsp; ')}}
+            </p>
+
+            <p class="lead">&nbsp;</p>
+
             <p class="lead">
               <a href="ResumeNickMakarovUX.pdf" class="btn btn-lg btn-default">Resume</a>
             </p>
-            <p class="filesize">113 kb PDF</p>
+            <p class="filesize">113 kb &nbsp; <a href="ResumeNickMakarovUX.pdf">PDF</a> | <a href="ResumeNickMakarovUX.docx">Word</a></p>
           </div>
 
           <div class="mastfoot">
@@ -72,6 +86,8 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
     <script src="docs.min.js"></script>
+    <script src="js/app.js"></script>
   </body>
 </html>

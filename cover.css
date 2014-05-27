@@ -166,3 +166,10 @@ body {
   font-size: 0.8em;
   color:#777;
 }
+
+.secondary {
+  color: #777;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
