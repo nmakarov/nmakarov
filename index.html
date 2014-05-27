@@ -50,14 +50,14 @@
             <p class="lead">Web developer</p>
 
             <p>
-              <span ng-repeat="record in skills">
+              <span ng-repeat="record in skills" ng-cloak class="ng-cloak">
                 {{record.skill}}&nbsp;<span class="secondary">{{record.details.join(', ')}}</span>
               </span>              
             </p>
 
             <p class="lead">&nbsp;</p>
 
-            <p>
+            <p ng-cloak class="ng-cloak">
               {{projects.join(', &nbsp; ')}}
             </p>
 
