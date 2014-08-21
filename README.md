@@ -11,3 +11,9 @@ Created by the following:
 5. git pull origin master
 6. bower install bootstrap
 7. 
+
+
+## always handy
+
+```python -m SimpleHTTPServer```
+

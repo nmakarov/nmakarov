@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Geo</title>
+</head>
+<body>
+	<h1>Testing GEO</h1>
+	<div>Current location:</div>
+	<div class="result">
+		checking...
+	</div>
+	<div><button class="btnRefresh">Refresh</button></div>
+
+    <script src="xui-more-1.0.0.min.js"></script>
+	<script type="text/javascript">
+		$ = x$;
+
+		var err = function (msg) {
+			msg = 'error: ' + (msg ? msg : 'geolocation failed.');
+			console.log(msg);
+			$('.result').html(msg);
+		};
+
+		var geoFound = function (pos) {
+			// {
+			// 	"timestamp":1408650539868,
+			// 	"coords":{
+			// 		"speed":null,
+			// 		"heading":null,
+			// 		"altitudeAccuracy":null,
+			// 		"accuracy":32,
+			// 		"altitude":null,
+			// 		"longitude":-123.1048689,
+			// 		"latitude":49.2842886
+			// 	}
+			// } 
+			
+			var lon = pos.coords.longitude;
+			var lat = pos.coords.latitude;
+
+			var msg = '';
+			msg += '<p>time: ' + pos.timestamp + '</p>';
+			msg += '<p>lon: ' + lon + '</p>';
+			msg += '<p>lat: ' + lat + '</p>';
+
+			$('.result').html(msg);			
+			console.log(JSON.stringify(pos));
+		};
+
+		var refreshGeo = function () {
+			if ( ! navigator.geolocation) {
+				$('.result').html('GeoLocation is not supported.');
+				return;
+			}
+
+			navigator.geolocation.getCurrentPosition(geoFound, err);
+		};
+
+		$('.result').html('aaa');
+		$('.btnRefresh').on('click', refreshGeo);
+
+
+		refreshGeo();
+
+	</script>
+</body>
+</html>
