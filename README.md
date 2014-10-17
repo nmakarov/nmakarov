@@ -17,3 +17,13 @@ Created by the following:
 
 ```python -m SimpleHTTPServer```
 
+
+## todo
+
+- add a `Disclaimer` page
+- add a work-related hobbies page
+- add a references page with exempts from real reference check forms
+
+## disclaimers
+
+I do not use photos shot by someone else. 
