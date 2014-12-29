@@ -57,8 +57,8 @@
 
             <p class="lead">&nbsp;</p>
 
-            <p ng-cloak class="ng-cloak">
-              {{projects.join(', &nbsp; ')}}
+            <p ng-cloak class="ng-cloak" ng-bind-template="{{projects.join(', &nbsp; ')}}">
+              projects...
             </p>
 
             <p class="lead">&nbsp;</p>
