@@ -8,16 +8,16 @@
           details: ["Less", "Sass"]
         }, {
           skill: "Javascript",
-          details: ["Node.JS", "CoffeeScript", "jQuery", "Ajax", "RESTful", "JSON"]
+          details: ["ES6", "Node.JS", "CoffeeScript", "jQuery", "Ajax", "RESTful", "JSON"]
         }, {
           skill: "Javascript Libraries",
-          details: ["Angular", "Backbone", "ExtJS", "Dojo"]
+          details: ["React", "Angular", "Backbone", "ExtJS", "Dojo"]
         }, {
           skill: "Testing",
           details: ["Karma", "Jasmine", "Mocha"]
         }, {
           skill: "Tools",
-          details: ["Compass", "Cake", "Grunt", "Bower", "Jenkins"]
+          details: ["Compass", "Cake", "Grunt", "Bower", "Jenkins", "Ansible", "Shipit"]
         }, {
           skill: "Web Servers",
           details: ["Apache", "nginx", "Lighttpd"]
